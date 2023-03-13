@@ -1,9 +1,12 @@
 // TASK_1 - Vacation
 
 // variant A
-let monthOfVacation = 'August';
+let monthOfVacation = 'JuLy';
 
-if (monthOfVacation == 'July' || monthOfVacation == 'August') {
+if (
+	monthOfVacation.toLowerCase() == 'july' ||
+	monthOfVacation.toLowerCase() == 'august'
+) {
 	console.log('approved')
 } else { 
 	console.log('denied')
@@ -12,7 +15,10 @@ if (monthOfVacation == 'July' || monthOfVacation == 'August') {
 // variant B
 let month = prompt('Please, enter a prefer month for your vacation');
 
-if (month == 'July' || month == 'August') {
+if (
+	month.toLowerCase() == 'july' ||
+	month.toLowerCase() == 'august'
+) {
 	alert(`Your request for vacation in ${month} is approved`)
 } else { 
 	alert(`Your request for vacation in ${month} is denied`)
