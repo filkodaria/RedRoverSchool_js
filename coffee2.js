@@ -19,7 +19,7 @@ let device = 'coffee machine';
 let step1 = ` Make sure the ${device} is switch on`;
 let step2 = ` Pour ${ingr2} in the water container of ${device} to the Max mark`;
 let step3 = ` Fill ${ingr1} into the beans container of ${device}`;
-let step4 = ` Put a cup of selected size`;
+let step4 = ` Put a cup of selected size into the cup cell`;
 let step5 = ` Start the coffee preparation pressing the button "Brew"`;
 let step6 = ` Waiting for adding of ${ingr3} into the cup`;
 let step7 = ` Enjoy your drink!`;
@@ -41,63 +41,63 @@ let price;
 let totalPrice;
 
 // Select drink and cup size
-let choiceCoffee = "latte"; // espresso cappuccino latte
+let choiceCoffee = "espresso"; // espresso cappuccino latte
 let choiceCup = 'L'; // S M L
 let amount = 3;
 
 console.log(`Welcome to the Darfi's coffee shop! What can I prepare for you?`);
-if (choiceCoffee == "espresso") {
+if (choiceCoffee == 'espresso') {
 	console.log(`You have ordered ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup}.`);
-	if (choiceCup == "S") {
+	if (choiceCup == 'S') {
 		console.log(recipeCoffee);
 		price = 10;
 		totalPrice = price * amount;
-		console.log(amount + ` cup(s) of ${choiceCoffee} in size ${choiceCup} costs ${totalPrice} USD.`)
-	} else if (choiceCup == "M") {
-		console.log(`A cup of ${choiceCoffee} isn't available in size ${choiceCup}.`)
-	} else if (choiceCup == "L") {
-		console.log(`A cup of ${choiceCoffee} isn't available in size ${choiceCup}.`)
+		console.log(`The total price for ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup} is ${totalPrice} USD.`)
+	} else if (choiceCup == 'M') {
+		console.log(`Unfortunately, ${choiceCoffee} isn't available in size ${choiceCup}.`)
+	} else if (choiceCup == 'L') {
+		console.log(`Unfortunately, ${choiceCoffee} isn't available in size ${choiceCup}.`)
 	} else {
 		console.log('Make sure you have chosen a correct cup size!');
 	}
 }
-else if (choiceCoffee == "cappuccino") {
+else if (choiceCoffee == 'cappuccino') {
 	console.log(`You have ordered ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup}.`);
-	if (choiceCup == "S") {
+	if (choiceCup == 'S') {
 		console.log(recipeCoffeeMilk);
 		price = 14;
 		totalPrice = price * amount;
-		console.log(amount + ` cup(s) of ${choiceCoffee} in size ${choiceCup} costs ${totalPrice} USD.`)
-	} else if (choiceCup == "M") {
+		console.log(`The total price for ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup} is ${totalPrice} USD.`)
+	} else if (choiceCup == 'M') {
 		console.log(recipeCoffeeMilk);
 		price = 24;
 		totalPrice = price * amount;
-		console.log(amount + ` cup(s) of ${choiceCoffee} in size ${choiceCup} costs ${totalPrice} USD.`)
-	} else if (choiceCup == "L") {
+		console.log(`The total price for ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup} is ${totalPrice} USD.`)
+	} else if (choiceCup == 'L') {
 		console.log(recipeCoffeeMilk);
 		price = 34;
 		totalPrice = price * amount;
-		console.log(amount + ` cup(s) of ${choiceCoffee} in size ${choiceCup} costs ${totalPrice} USD.`)
+		console.log(`The total price for ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup} is ${totalPrice} USD.`)
 	} else {
 		console.log('Make sure you have chosen a correct cup size!');
 	}
 }
 else if (choiceCoffee == 'latte') {
 	console.log(`You have ordered ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup}.`);
-	if (choiceCup == "S") {
-		console.log(`A cup of ${choiceCoffee} isn't available in size ${choiceCup}.`);
-	} else if (choiceCup == "M") {
+	if (choiceCup == 'S') {
+		console.log(`Unfortunately, ${choiceCoffee} isn't available in size ${choiceCup}.`);
+	} else if (choiceCup == 'M') {
 		console.log(recipeCoffeeMilk);
 		price = 29;
 		totalPrice = price * amount;
-    console.log(amount + ` cup(s) of ${choiceCoffee} in size ${choiceCup} costs ${totalPrice} USD.`);
-	} else if (choiceCup == "L") {
+    console.log(`The total price for ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup} is ${totalPrice} USD.`);
+	} else if (choiceCup == 'L') {
 		console.log(recipeCoffeeMilk);
 		price = 39;
 		totalPrice = price * amount;
-    console.log(amount +` cup(s) of ${choiceCoffee} in size ${choiceCup} costs ${totalPrice} USD.`);
+    console.log(`The total price for ${amount} cup(s) of ${choiceCoffee} in size ${choiceCup} is ${totalPrice} USD.`);
   } else {
-    console.log("Make sure you have chosen a correct cup size!");
+    console.log('Make sure you have chosen a correct cup size!');
   }
 }
 else {
