@@ -37,7 +37,7 @@ switch (operator) {
 
 
 // TASK_3 - Even numbers
-
+// with array
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for (let i = 0; i < arr.length; i++) {
 	if (arr[i] % 2 == 0) {
@@ -45,22 +45,35 @@ for (let i = 0; i < arr.length; i++) {
 	}
 }
 
+// general_1
+for (let i = 2; i <= 10; i += 2) {
+	console.log(i);
+}
+
+// general_2
+for (let i = 1; i <= 10; i++) {
+	if (i % 2 == 0) {
+		console.log(i);
+	}
+}
+
 
 // TASK_4 - Brackets
 
-let arrBracket = [')', ')', '(', ')', ')', '(', '(']
+let arrBracket = ['(', ')', ')', '(', ')', ')', '(', '(']
 count1 = 0;
 count2 = 0;
 
 for (let i = 0; i < arrBracket.length; i++) {
-	if (arrBracket[i] == ')') {
+	if (arrBracket[i] == '(') {
 		count1++;
-	} else if (arrBracket[i] == '(') {
+	} else if (arrBracket[i] == ')') {
 		count2++;
 	}
 }
+console.log(`opening - ${count1}, closing - ${count2}`)
 if (count1 == count2) {
-  console.log("All brackets have a pair");
+  console.log("All brackets have pairs");
 } else console.log("Some pairs are missed!");
 
 
@@ -73,7 +86,7 @@ console.log(arrCipher.replace(/br/g, ''));
 let arrEncoder = 'My name is Daria';
 let newEncoder = '';
 
-for (let i = 0; i < arrEncoder.length; i++) {
+for (let i = 0; i < arrEncoder.length; i ++) {
 	newEncoder += arrEncoder[i] + arrEncoder[i];
 }
 console.log(newEncoder);
@@ -89,13 +102,29 @@ for (let i = 0; i < newEncoder.length; i += 2) {
 
 // TASK_REVIEW_Tatiana - Tree & Rhombus
 // tree
+// let sign = "*";
+// let range = 5;
+// let strTree = "";
+
+// for (let i = 0; i < range; i++) {
+//   if (i == 0) {
+//     strTree += "    " + sign;
+//   } else {
+//     strTree = strTree.substring(1) + sign + sign;
+//   }
+//   console.log(strTree);
+// }
+
 let sign = "*";
-let range = 5;
+let range = 6;
 let strTree = "";
 
 for (let i = 0; i < range; i++) {
   if (i == 0) {
-    strTree += "    " + sign;
+		for (let ind = 0; ind < (range - 1); ind ++) {
+			strTree += " ";
+		}
+		strTree += sign;
   } else {
     strTree = strTree.substring(1) + sign + sign;
   }
