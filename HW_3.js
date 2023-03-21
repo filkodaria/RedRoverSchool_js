@@ -80,7 +80,14 @@ if (count1 == count2) {
 // TASK_5 - Creative task дешифратор
 // 1_decoder program
 let arrCipher = "Ybrobrubr brabrrbrebr brtbrhbrebr brbbrebrsbrtbr brQbrAbr brebrvbrebrrbr";
+// OR
 console.log(arrCipher.replace(/br/g, ''));
+// OR
+let decoderResult = '';
+for (i = 0; i < arrCipher.length; i += 3) {
+	decoderResult += arrCipher[i];
+}
+console.log(decoderResult);
 
 // 2_my own encoder program
 let arrEncoder = 'My name is Daria';
@@ -95,13 +102,13 @@ console.log(newEncoder);
 let newDecoder = '';
 
 for (let i = 0; i < newEncoder.length; i += 2) {
-	newDecoder += newEncoder.slice(i, i+1);
+	newDecoder += newEncoder[i];                        // += newEncoder.slice(i, i+1) 
 	console.log(newDecoder);
 }
 
 
 // TASK_REVIEW_Tatiana - Tree & Rhombus
-// tree
+// tree КОСТЫЛИ
 // let sign = "*";
 // let range = 5;
 // let strTree = "";
@@ -115,8 +122,28 @@ for (let i = 0; i < newEncoder.length; i += 2) {
 //   console.log(strTree);
 // }
 
+// rhombus КОСТЫЛИ
+// let sign1 = "*";
+// let sign2 = " ";
+// let range1 = 3;
+// let strRhomb = "";
+
+// for (let i = 0; i < range1; i++) {
+// 	if (i == 0) {
+// 		strRhomb += '    ' + sign1;
+// 	} else {
+// 		strRhomb = strRhomb.substring(1) + sign1 + sign1;
+// 	}
+//     console.log(strRhomb);
+// }
+// for (i = range1; i > 0; i--) {
+// 	strRhomb = sign2 + strRhomb.slice(0, -2);
+//   console.log(strRhomb);
+// }
+
+// TREE
 let sign = "*";
-let range = 6;
+let range = 4;
 let strTree = "";
 
 for (let i = 0; i < range; i++) {
@@ -131,21 +158,24 @@ for (let i = 0; i < range; i++) {
   console.log(strTree);
 }
 
-// rhombus
+// RHOMBUS
 let sign1 = "*";
-let sign2 = " ";
-let range1 = 3;
+let sign2 = ' ';
+let rangeRhomb = 20;
 let strRhomb = "";
 
-for (let i = 0; i < range1; i++) {
-	if (i == 0) {
-		strRhomb += '    ' + sign1;
-	} else {
-		strRhomb = strRhomb.substring(1) + sign1 + sign1;
-	}
-    console.log(strRhomb);
+for (let i = 0; i < rangeRhomb; i++) {
+  if (i == 0) {
+    for (let j = 0; j < rangeRhomb - 1; j++) {
+      strRhomb += " ";
+    }
+    strRhomb += sign1;
+  } else {
+    strRhomb = strRhomb.substring(1) + sign1 + sign1;
+  }
+  console.log(strRhomb);
 }
-for (i = range1; i > 0; i--) {
-	strRhomb = sign2 + strRhomb.slice(0, -2);
+for (let i = rangeRhomb; i > 0; i--) {
+  strRhomb = sign2 + strRhomb.slice(0, -2);
   console.log(strRhomb);
 }
