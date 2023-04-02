@@ -108,42 +108,11 @@ for (let i = 0; i < newEncoder.length; i += 2) {
 
 
 // TASK_REVIEW_Tatiana - Tree & Rhombus
-// tree КОСТЫЛИ
-// let sign = "*";
-// let range = 5;
-// let strTree = "";
 
-// for (let i = 0; i < range; i++) {
-//   if (i == 0) {
-//     strTree += "    " + sign;
-//   } else {
-//     strTree = strTree.substring(1) + sign + sign;
-//   }
-//   console.log(strTree);
-// }
-
-// rhombus КОСТЫЛИ
-// let sign1 = "*";
-// let sign2 = " ";
-// let range1 = 3;
-// let strRhomb = "";
-
-// for (let i = 0; i < range1; i++) {
-// 	if (i == 0) {
-// 		strRhomb += '    ' + sign1;
-// 	} else {
-// 		strRhomb = strRhomb.substring(1) + sign1 + sign1;
-// 	}
-//     console.log(strRhomb);
-// }
-// for (i = range1; i > 0; i--) {
-// 	strRhomb = sign2 + strRhomb.slice(0, -2);
-//   console.log(strRhomb);
-// }
-
+// Variant_1
 // TREE
 let sign = "*";
-let range = 4;
+let range = 7;
 let strTree = "";
 
 for (let i = 0; i < range; i++) {
@@ -178,4 +147,47 @@ for (let i = 0; i < rangeRhomb; i++) {
 for (let i = rangeRhomb; i > 0; i--) {
   strRhomb = sign2 + strRhomb.slice(0, -2);
   console.log(strRhomb);
+}
+
+
+// Variant_2_HW_review
+// TREE
+let heightTree = 7;
+let middleTree = heightTree - 1;
+
+for (let i = 0; i < heightTree; i++) {
+	let lineTree = "";
+	for (let j = 0; j < middleTree - i; j++) {
+		lineTree += ' ';
+	}
+	for (let k = 0; k < (2*i + 1); k++) {
+		lineTree += "*";
+	}
+	console.log(lineTree);
+}
+
+// RHOMBUS
+let heightRhomb = 5;
+let middleRhomb = heightRhomb - 1;
+
+for (let i = 0; i < heightRhomb; i++) {
+  let lineRhomb = "";
+  for (let j = 0; j < middleRhomb - i; j++) {
+    lineRhomb += " ";
+  }
+  for (let k = 0; k < 2 * i + 1; k++) {
+    lineRhomb += "*";
+  }
+  console.log(lineRhomb);
+}
+//
+for (let i = heightRhomb - 1; i > 0; i--) {
+  let lineRhomb = "";
+  for (let j = heightRhomb - i; j > 0; j--) {
+    lineRhomb += " ";
+  }
+  for (let k = 2 * i - 1; k > 0; k--) {
+    lineRhomb += "*";
+  }
+  console.log(lineRhomb);
 }
