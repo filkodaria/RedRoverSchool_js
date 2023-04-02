@@ -180,13 +180,12 @@ for (let i = 0; i < heightRhomb; i++) {
   }
   console.log(lineRhomb);
 }
-//
-for (let i = heightRhomb - 1; i > 0; i--) {
+for (let i = heightRhomb - 2; i >= 0; i--) {
   let lineRhomb = "";
-  for (let j = heightRhomb - i; j > 0; j--) {
+  for (let j = 0; j < middleRhomb - i; j++) {
     lineRhomb += " ";
   }
-  for (let k = 2 * i - 1; k > 0; k--) {
+  for (let k = 0; k < 2 * i + 1; k++) {
     lineRhomb += "*";
   }
   console.log(lineRhomb);
